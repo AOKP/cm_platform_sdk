@@ -881,7 +881,6 @@ public final class CMSettings {
          * Display style of the status bar battery information
          * 0: Display the battery an icon in portrait mode
          * 2: Display the battery as a circle
-         * 3: Display the battery as a dotted circle
          * 4: Hide the battery status information
          * 5: Display the battery an icon in landscape mode
          * 6: Display the battery as plain text
@@ -951,7 +950,7 @@ public final class CMSettings {
         /** @hide */
         public static final Validator NAV_BUTTONS_VALIDATOR =
                 new DelimitedListValidator(new String[] {"empty", "home", "back", "search",
-                        "recent", "menu0", "menu1", "menu2", "dpad_left", "dpad_right", "power", "notifications", "torch", "camera", "screenshot", "expand"}, "|", true);
+                        "recent", "menu0", "menu1", "menu2", "dpad_left", "dpad_right"}, "|", true);
 
         /**
          * Volume key controls ringtone or media sound stream
@@ -1738,36 +1737,6 @@ public final class CMSettings {
         public static final String NOTIFICATION_LIGHT_PULSE_CUSTOM_VALUES =
                 "notification_light_pulse_custom_values";
 
-        /**
-         * Which applications to disable heads up notifications in
-         *
-         * @hide
-         */
-        public static final String HEADS_UP_CUSTOM_VALUES = "heads_up_custom_values";
-
-        /** @hide */
-        public static final Validator HEADS_UP_CUSTOM_VALUES_VALIDATOR = sAlwaysTrueValidator;
-
-        /**
-         * Which applications to disable heads up notifications for
-         *
-         * @hide
-         */
-        public static final String HEADS_UP_BLACKLIST_VALUES = "heads_up_blacklist_values";
-
-        /** @hide */
-        public static final Validator HEADS_UP_BLACKLIST_VALUES_VALIDATOR = sAlwaysTrueValidator;
-
-        /**
-         * Which applications to post all notification to heads up
-         *
-         * @hide
-         */
-        public static final String HEADS_UP_WHITELIST_VALUES = "heads_up_whitelist_values";
-
-        /** @hide */
-        public static final Validator HEADS_UP_WHITELIST_VALUES_VALIDATOR = sAlwaysTrueValidator;
-
         /** @hide */
         public static final Validator NOTIFICATION_LIGHT_PULSE_CUSTOM_VALUES_VALIDATOR =
                 new Validator() {
@@ -1861,16 +1830,6 @@ public final class CMSettings {
 
         /** @hide */
         public static final Validator TOUCHSCREEN_GESTURE_HAPTIC_FEEDBACK_VALIDATOR =
-                sBooleanValidator;
-
-        /**
-         * Whether or not to ignore the notification slider when zen is in auto mode
-         */
-        public static final String NOTIFICATION_SLIDER_IGNORE_AUTO =
-                "notification_slider_ignore_auto";
-
-        /** @hide */
-        public static final Validator NOTIFICATION_SLIDER_IGNORE_AUTO_VALIDATOR =
                 sBooleanValidator;
 
         /**
@@ -2004,7 +1963,6 @@ public final class CMSettings {
                 CMSettings.System.HEADSET_CONNECT_PLAYER,
                 CMSettings.System.ZEN_ALLOW_LIGHTS,
                 CMSettings.System.TOUCHSCREEN_GESTURE_HAPTIC_FEEDBACK,
-                CMSettings.System.NOTIFICATION_SLIDER_IGNORE_AUTO,
         };
 
         /**
@@ -2158,12 +2116,6 @@ public final class CMSettings {
                     NOTIFICATION_LIGHT_PULSE_CUSTOM_ENABLE_VALIDATOR);
             VALIDATORS.put(NOTIFICATION_LIGHT_PULSE_CUSTOM_VALUES,
                     NOTIFICATION_LIGHT_PULSE_CUSTOM_VALUES_VALIDATOR);
-            VALIDATORS.put(HEADS_UP_CUSTOM_VALUES,
-                    HEADS_UP_CUSTOM_VALUES_VALIDATOR);
-            VALIDATORS.put(HEADS_UP_BLACKLIST_VALUES,
-                    HEADS_UP_BLACKLIST_VALUES_VALIDATOR);
-            VALIDATORS.put(HEADS_UP_WHITELIST_VALUES,
-                    HEADS_UP_WHITELIST_VALUES_VALIDATOR);
             VALIDATORS.put(NOTIFICATION_LIGHT_COLOR_AUTO,
                     NOTIFICATION_LIGHT_COLOR_AUTO_VALIDATOR);
             VALIDATORS.put(HEADSET_CONNECT_PLAYER, HEADSET_CONNECT_PLAYER_VALIDATOR);
@@ -2171,8 +2123,6 @@ public final class CMSettings {
             VALIDATORS.put(ZEN_PRIORITY_ALLOW_LIGHTS, ZEN_PRIORITY_ALLOW_LIGHTS_VALIDATOR);
             VALIDATORS.put(TOUCHSCREEN_GESTURE_HAPTIC_FEEDBACK,
                     TOUCHSCREEN_GESTURE_HAPTIC_FEEDBACK_VALIDATOR);
-            VALIDATORS.put(NOTIFICATION_SLIDER_IGNORE_AUTO,
-                    NOTIFICATION_SLIDER_IGNORE_AUTO_VALIDATOR);
             VALIDATORS.put(DISPLAY_PICTURE_ADJUSTMENT,
                     DISPLAY_PICTURE_ADJUSTMENT_VALIDATOR);
             VALIDATORS.put(__MAGICAL_TEST_PASSING_ENABLER,
@@ -2886,16 +2836,11 @@ public final class CMSettings {
         public static final String LOCK_SCREEN_BLUR_ENABLED = "lock_screen_blur_enabled";
 
         /**
-         * Allows setting the radius for lockscreen blur
-         * @hide
-         */
-        public static final String LOCKSCREEN_BLUR_RADIUS = "lockscreen_blur_radius";
-
-        /**
          * Whether to display weather information on the lock screen
          * @hide
          */
         public static final String LOCK_SCREEN_WEATHER_ENABLED = "lock_screen_weather_enabled";
+
 
         // endregion
 
