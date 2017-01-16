@@ -194,6 +194,8 @@ public class CMDatabaseHelper extends SQLiteOpenHelper{
                             + " VALUES(?,?);");
                     final String provisionedFlag = Settings.Global.getString(
                             mContext.getContentResolver(), Settings.Global.DEVICE_PROVISIONED);
+                    loadBooleanSetting(stmt,
+                            CMSettings.Secure.CM_SETUP_WIZARD_COMPLETED, R.bool.def_user_cmsetup_complete);
                     loadSetting(stmt, CMSettings.Secure.CM_SETUP_WIZARD_COMPLETED, provisionedFlag);
                     db.setTransactionSuccessful();
                 } finally {
@@ -318,6 +320,10 @@ public class CMDatabaseHelper extends SQLiteOpenHelper{
             stmt = db.compileStatement("INSERT OR IGNORE INTO secure(name,value)"
                     + " VALUES(?,?);");
             // Secure
+            loadBooleanSetting(stmt,
+                    CMSettings.Secure.CM_SETUP_WIZARD_COMPLETED,
+                    R.bool.def_user_cmsetup_complete);          
+          
             loadBooleanSetting(stmt, CMSettings.Secure.ADVANCED_MODE,
                     R.bool.def_advanced_mode);
 
@@ -410,10 +416,6 @@ public class CMDatabaseHelper extends SQLiteOpenHelper{
             stmt = db.compileStatement("INSERT OR IGNORE INTO global(name,value)"
                     + " VALUES(?,?);");
             // Global
-            loadBooleanSetting(stmt,
-                    CMSettings.Secure.CM_SETUP_WIZARD_COMPLETED,
-                    R.bool.def_user_cmsetup_complete);
-
             loadBooleanSetting(stmt,
                     CMSettings.Global.POWER_NOTIFICATIONS_ENABLED,
                     R.bool.def_power_notifications_enabled);
