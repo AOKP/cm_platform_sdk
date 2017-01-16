@@ -411,10 +411,6 @@ public class CMDatabaseHelper extends SQLiteOpenHelper{
                     + " VALUES(?,?);");
             // Global
             loadBooleanSetting(stmt,
-                    CMSettings.Secure.CM_SETUP_WIZARD_COMPLETED,
-                    R.bool.def_user_cmsetup_complete);
-
-            loadBooleanSetting(stmt,
                     CMSettings.Global.POWER_NOTIFICATIONS_ENABLED,
                     R.bool.def_power_notifications_enabled);
 
