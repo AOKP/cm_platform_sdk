@@ -107,6 +107,9 @@ public class CMSettingsProviderDefaultsTest extends AndroidTestCase {
         SECURE_SETTINGS_DEFAULTS.add(new Setting(
                 CMSettings.Secure.PROTECTED_COMPONENT_MANAGERS,
                 "R.string.def_protected_component_managers"));
+        SECURE_SETTINGS_DEFAULTS.add(new Setting(
+                CMSettings.Secure.CM_SETUP_WIZARD_COMPLETED,
+                "R.bool.def_user_cmsetup_complete"));
     }
 
     //GLOBAL
