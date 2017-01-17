@@ -194,7 +194,11 @@ public class CMDatabaseHelper extends SQLiteOpenHelper{
                             + " VALUES(?,?);");
                     final String provisionedFlag = Settings.Global.getString(
                             mContext.getContentResolver(), Settings.Global.DEVICE_PROVISIONED);
-                    loadSetting(stmt, CMSettings.Secure.CM_SETUP_WIZARD_COMPLETED, provisionedFlag);
+                    loadIntegerSetting(stmt,
+                            CMSettings.Secure.CM_SETUP_WIZARD_COMPLETED,
+                            R.integer.def_user_cmsetup_complete);
+                    loadSetting(stmt,
+                            CMSettings.Secure.CM_SETUP_WIZARD_COMPLETED, provisionedFlag);
                     db.setTransactionSuccessful();
                 } finally {
                     if (stmt != null) stmt.close();
@@ -350,6 +354,10 @@ public class CMDatabaseHelper extends SQLiteOpenHelper{
             loadStringSetting(stmt,
                     CMSettings.Secure.ENABLED_EVENT_LIVE_LOCKS_KEY,
                     R.string.def_enabled_event_lls_components);
+
+            loadIntegerSetting(stmt,
+                    CMSettings.Secure.CM_SETUP_WIZARD_COMPLETED,
+                    R.integer.def_user_cmsetup_complete);
 
             final String provisionedFlag = Settings.Global.getString(mContext.getContentResolver(),
                     Settings.Global.DEVICE_PROVISIONED);

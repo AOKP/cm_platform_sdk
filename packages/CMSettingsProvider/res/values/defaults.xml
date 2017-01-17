@@ -122,4 +122,7 @@
     -->
     <string name="def_enabled_event_lls_components"></string>
 
+    <!-- Default for CMSettings.Secure.CM_SETUP_WIZARD_COMPLETED -->
+    <integer name="def_user_cmsetup_complete">1</integer>
+
 </resources>
