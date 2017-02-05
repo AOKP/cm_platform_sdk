@@ -87,6 +87,12 @@
   <string name="perf_profile_perf">Kinerja</string>
   <string name="perf_profile_bias_power">Efisiensi</string>
   <string name="perf_profile_bias_perf">Cepat</string>
+  <!-- Performance profiles -->
+  <string name="perf_profile_pwrsv_summary">Penghematan daya maksimal. Mengurangi kinerja perangkat, menonaktifkan tugas latar belakang dan data, menonaktifkan animasi, dan mengurangi laju bingkai tampilan</string>
+  <string name="perf_profile_bal_summary">Seimbang antara kinerja yang optimal dan karakteristik kekuatan</string>
+  <string name="perf_profile_perf_summary">Mode kinerja tinggi. Berguna untuk aplikasi yang memerlukan latency rendah dan tertinggi throughput ketika konsumsi daya tidak perhatian</string>
+  <string name="perf_profile_bias_power_summary">Mendukung penghematan daya. Batas maksimum power CPU dan mengoptimalkan untuk penghematan biaya latensi lebih tinggi daya</string>
+  <string name="perf_profile_bias_perf_summary">Mendukung kinerja. Mengurangi latensi dengan konsumsi daya yang sedikit meningkat</string>
   <!-- LiveDisplay strings -->
   <string name="live_display_auto">Otomatis</string>
   <string name="live_display_auto_summary">Menyesuaikan suhu warna layar secara otomatis setelah matahari terbenam dan terbit</string>
@@ -113,14 +119,6 @@
   <string name="permlab_thirdPartyKeyguard">layar kunci pihak ketiga</string>
   <!-- Third party keyguard permission description -->
   <string name="permdesc_thirdPartyKeyguard">Mengizinkan sebuah aplikasi untuk digunakan sebagai layar kunci yang tidak aman.</string>
-  <!-- Device specific settings -->
-  <string name="device_settings_app_name">Pengaturan lanjut</string>
-  <!-- Touchscreen gestures -->
-  <string name="screen_gestures_panel_title">Gerakan</string>
-  <!-- Touchscreen gesture haptic feedback -->
-  <string name="touchscreen_gesture_extras">Tambahan</string>
-  <string name="touchscreen_gesture_haptic_feedback">Loloh balik haptic</string>
-  <string name="touchscreen_gesture_haptic_feedback_summary">Bergetar pada saat gerakan terdeteksi</string>
   <!-- Theme installation error notification -->
   <string name="theme_install_error_title">Gagal menginstal tema</string>
   <string name="theme_install_error_message"><xliff:g id="theme">%1$s</xliff:g> gagal diinstal</string>
@@ -184,12 +182,9 @@
   <!-- QuickSettings: Themes tile -->
   <string name="qs_themes_label">Tema</string>
   <string name="qs_themes_content_description">Sesuaikan tema Anda</string>
-  <!-- Custom booot dexopt -->
-  <string name="android_upgrading_starting_apps">Memulai aplikasi\u2026</string>
-  <string name="android_upgrading_fstrim">Mengoptimalkan penyimpanan\u2026</string>
-  <string name="android_upgrading_complete">Bersiap untuk memulai\u2026</string>
-  <string name="android_upgrading_complete_details">Optimasi selesai.</string>
-  <string name="android_preparing_apk">Menyiapkan %1$s\u2026</string>
-  <string name="android_preparing_apk_obscured">Menyiapkan aplikasi\u2026</string>
-  <string name="android_upgrading_apk">Aplikasi %1$d dari %2$d</string>
+  <!-- Privacy Guard -->
+  <string name="privacy_guard_manager_title">Penjaga Privasi</string>
+  <!-- Permissions used by remote preferences -->
+  <string name="permlab_manageRemotePrefs">mengelola pengaturan jarak jauh</string>
+  <string name="permdesc_manageRemotePrefs">Memungkinkan aplikasi untuk mengelola pengaturan jarak jauh</string>
 </resources>
