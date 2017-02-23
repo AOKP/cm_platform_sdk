@@ -28,9 +28,6 @@
 
     <!-- Defaults for Secure -->
 
-    <!-- Default for CMSettings.Secure.CM_SETUP_WIZARD_COMPLETED -->
-    <bool name="def_user_cmsetup_complete">true</bool>
-
     <!-- Default for CMSettings.Secure.ADVANCED_MODE -->
     <bool name="def_advanced_mode">true</bool>
 
