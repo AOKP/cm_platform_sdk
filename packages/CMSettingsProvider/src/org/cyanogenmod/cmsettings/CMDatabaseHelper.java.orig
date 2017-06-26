@@ -23,7 +23,6 @@ import android.content.res.AssetManager;
 import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.database.sqlite.SQLiteDatabase;
-import android.database.sqlite.SQLiteDoneException;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.database.sqlite.SQLiteStatement;
 import android.os.Build;
@@ -47,7 +46,11 @@ public class CMDatabaseHelper extends SQLiteOpenHelper{
     private static final boolean LOCAL_LOGV = false;
 
     private static final String DATABASE_NAME = "cmsettings.db";
+<<<<<<< HEAD
+    private static final int DATABASE_VERSION = 6;
+=======
     private static final int DATABASE_VERSION = 8;
+>>>>>>> 8f3b971e... Make CMParts a protected component manager
 
     public static class CMTableNames {
         public static final String TABLE_SYSTEM = "system";
@@ -233,6 +236,8 @@ public class CMDatabaseHelper extends SQLiteOpenHelper{
             }
             upgradeVersion = 6;
         }
+<<<<<<< HEAD
+=======
 
         if (upgradeVersion < 7) {
             if (mUserHandle == UserHandle.USER_OWNER) {
@@ -276,6 +281,7 @@ public class CMDatabaseHelper extends SQLiteOpenHelper{
             }
             upgradeVersion = 8;
         }
+>>>>>>> 8f3b971e... Make CMParts a protected component manager
         // *** Remember to update DATABASE_VERSION above!
 
         if (upgradeVersion < newVersion) {
